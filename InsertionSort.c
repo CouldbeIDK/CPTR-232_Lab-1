@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int read_doc(char filename[]){
+int read_line(char filename[]){
 	FILE *origional;
 	origional = fopen(filename,"r");
 	int first_line;
@@ -10,6 +10,11 @@ int read_doc(char filename[]){
 };
 
 int main() {
-	int firstline = read_doc("Example.txt");
-	printf("%d\n", firstline);
+	int orgarray[64];
+	int i;
+	for (i=0; i<=63; i++){
+		orgarray[i] = 0;
+		printf("%d\n", orgarray[i]);
+		}
+	
 }
