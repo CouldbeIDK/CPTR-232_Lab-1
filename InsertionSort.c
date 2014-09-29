@@ -1,20 +1,23 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int read_line(char filename[]){
-	FILE *origional;
-	origional = fopen(filename,"r");
-	int first_line;
-	fscanf(origional, "%d", &first_line);
-	return first_line;
+int read_line(){
+	FILE *source;
+	source = fopen(source,"r");
+	int line;
+	fscanf(source, "%d", &line);
+	return line;
 };
 
 int main() {
-	int orgarray[64];
+	int sorted[64];
 	int i;
-	for (i=0; i<=63; i++){
-		orgarray[i] = 0;
-		printf("%d\n", orgarray[i]);
-		}
-	
+	for (i=0 ; i < 64 ; i++){
+		sorted[i] = 0;
+	}
+	for (i=0 ; i < 64 ; i++){
+		printf("%d, ", sorted[i]);
+	}
+	/*for (i=0 ; current != * ; i++) {
+		*/
 }
