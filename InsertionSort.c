@@ -3,16 +3,13 @@
 
 int main() {
 	int sorted[64];
-	int i;
-	int j;
-	int k;
-	int key;
-	FILE * source;
-	source = fopen("Example.txt","r");
-	for (k=0 ; k < 64 ; k++){
-		fscanf(source, "%d", &sorted[k]);
+	int i, j, k, key, slength;
+	i=0;
+	while ((scanf("%d", &j) >= 0) && (i<64)){
+		sorted[i++] = j;
 	}
-	for (j=1 ; j < 64 ; j++){
+	slength = i;
+	for (j=1 ; j < slength ; j++){
 		key = sorted[j];
 		i = j - 1;
 		while (i >= 0 && sorted[i] > key) {
@@ -21,7 +18,7 @@ int main() {
 		}
 		sorted[i+1] = key;
 	}
-	for (k=0 ; k < 64 ; k++){
+	for (k=0 ; k < slength ; k++){
 		printf("%d\n", sorted[k]);
 	}
 }
